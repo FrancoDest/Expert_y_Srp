@@ -5,7 +5,7 @@ namespace Library
 {
     public static class Verificador_PhoneNumber
     {
-        public static bool PhoneNumberisNullOrEmpty(string phone)
+        public static bool ValidPhoneNumber(string phone)
         {
             Boolean isValid = true;
             if (string.IsNullOrEmpty(phone))
@@ -17,9 +17,9 @@ namespace Library
         public static string MsgPhoneNumber(string phone)
         {
             string result = "";
-            if (string.IsNullOrEmpty(phone))
+            if (!ValidPhoneNumber(phone))
             {
-                result = "Unable to schedule appointment, phone number is required\n";
+                result = "Unable to schedule appointment, Phone number is required\n";
             }
             return result;
         }

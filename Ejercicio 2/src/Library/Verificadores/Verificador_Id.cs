@@ -5,7 +5,7 @@ namespace Library
 {
     public static class Verificador_Id
     {
-        public static bool IdisNullOrEmpty(string id)
+        public static bool ValidId(string id)
         {
             Boolean isValid = true;
             if (string.IsNullOrEmpty(id))
@@ -17,7 +17,7 @@ namespace Library
         public static string MsgId(string id)
         {
             string result = "";
-            if (string.IsNullOrEmpty(id))
+            if (!ValidId(id))
             {
                 result = "Unable to schedule appointment, id is required\n";
             }

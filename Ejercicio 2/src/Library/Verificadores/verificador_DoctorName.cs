@@ -5,19 +5,19 @@ namespace Library
 {
     public static class Verificador_DoctorName
     {
-        public static bool DoctorNameisNullOrEmpty(string doctorname)
+        public static bool ValidDoctorName(string doctorName)
         {
             Boolean isValid = true;
-            if (string.IsNullOrEmpty(doctorname))
+            if (string.IsNullOrEmpty(doctorName))
             {
                 isValid = false;
             }
             return isValid;
         }
-        public static string MsgDoctorName(string doctor_name)
+        public static string MsgDoctorName(string doctorName)
         {
             string result = "";
-            if (string.IsNullOrEmpty(doctor_name))
+            if (!ValidDoctorName(doctorName))
             {
                 result = "Unable to schedule appointment, Doctor name is required\n";
             }

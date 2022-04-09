@@ -5,51 +5,34 @@ namespace Library
 {
     public class AppointmentService
     {
-        public static string CreateAppointment(string name, string id, string phoneNumber, DateTime date, string appoinmentPlace, string doctorName)
-        {/*
+        public static string CreateAppointment(string name, string id, string phoneNumber, DateTime date, string appointmentPlace, string doctorName)
+        {
             StringBuilder stringBuilder = new StringBuilder("Scheduling appointment...\n");
-            Boolean isValid = true;
+            bool result = Validator.ValidStrings(name, id, phoneNumber, appointmentPlace, doctorName);
 
-            if (string.IsNullOrEmpty(name))
-            {
-                stringBuilder.Append("Unable to schedule appointment, Name is required\n");
-                isValid = false;
-            }
+            string msg_name = Verificador_Name.MsgName(name);
+            stringBuilder.Append(msg_name);
 
-            if (string.IsNullOrEmpty(id))
-            {
-                stringBuilder.Append("Unable to schedule appointment, id is required\n");
-                isValid = false;
-            }
+            string msg_id = Verificador_Id.MsgId(id);
+            stringBuilder.Append(msg_id);
 
-            if (string.IsNullOrEmpty(phoneNumber))
-            {
-                stringBuilder.Append("Unable to schedule appointment, Phone number is required\n");
-                isValid = false;
-            }
+            string msg_phone = Verificador_PhoneNumber.MsgPhoneNumber(phoneNumber);
+            stringBuilder.Append(msg_phone);
 
-            if (string.IsNullOrEmpty(appoinmentPlace))
-            {
-                stringBuilder.Append("Unable to schedule appointment, Appoinment place is required\n");
-                isValid = false;
-            }
+            string msg_place = Verificador_AppointmentPlace.MsgAppointmentPlace(appointmentPlace);
+            stringBuilder.Append(msg_place);
 
-            
-            if (string.IsNullOrEmpty(doctorName))
-            {
-                stringBuilder.Append("Unable to schedule appointment, Doctor name is required\n");
-                isValid = false;
-            }
+            string msg_doctor = Verificador_DoctorName.MsgDoctorName(doctorName);
+            stringBuilder.Append(msg_doctor);
 
-            if (isValid)
+            if (result)
             {
                 stringBuilder.Append("Appoinment Scheduled");
             }
-
-            return stringBuilder.ToString();
-        */
-        return Generador.generador (name, id, phoneNumber, appoinmentPlace, doctorName);
+            string Text = stringBuilder.ToString();
+            return Text;
         }
+
 
     }
 }

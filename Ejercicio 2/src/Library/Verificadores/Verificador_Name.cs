@@ -5,10 +5,10 @@ namespace Library
 {
     public static class Verificador_Name
     {
-        public static bool NameisNullOrEmpty(string name)
+        public static bool ValidName(string client_name)
         {
             Boolean isValid = true;
-            if (string.IsNullOrEmpty(name))
+            if (string.IsNullOrEmpty(client_name))
             {
                 isValid = false;
             }
@@ -17,7 +17,7 @@ namespace Library
         public static string MsgName(string client_name)
         {
             string result = "";
-            if (string.IsNullOrEmpty(client_name))
+            if (!ValidName(client_name))
             {
                 result = "Unable to schedule appointment, Name is required\n";
             }
