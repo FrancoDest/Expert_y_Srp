@@ -5,6 +5,16 @@ namespace Library
 {
     public class AppointmentService
     {
+        /// <summary>
+        /// Este método tiene varias responsabilidades, las cuales consisten en imprimir un mensaje en consola, y verificar que los datos ingresados no sean nulos. Para que la clase cumpla con SRP, la impresión del mensaje y cada verificación de los datos ingresados deeberían realizarse por separado.
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="id"></param>
+        /// <param name="phoneNumber"></param>
+        /// <param name="date"></param>
+        /// <param name="appoinmentPlace"></param>
+        /// <param name="doctorName"></param>
+        /// <returns></returns>
         public static string CreateAppointment(string name, string id, string phoneNumber, DateTime date, string appoinmentPlace, string doctorName)
         {
             StringBuilder stringBuilder = new StringBuilder("Scheduling appointment...\n");
@@ -30,10 +40,9 @@ namespace Library
 
             if (string.IsNullOrEmpty(appoinmentPlace))
             {
-                stringBuilder.Append("Unable to schedule appointment, Appoinment place is required\n");
+                stringBuilder.Append("Unable to schedule appointment, Appointment place is required\n");
                 isValid = false;
             }
-
             
             if (string.IsNullOrEmpty(doctorName))
             {
@@ -43,7 +52,7 @@ namespace Library
 
             if (isValid)
             {
-                stringBuilder.Append("Appoinment Scheduled");
+                stringBuilder.Append("Appointment Scheduled");
             }
 
             return stringBuilder.ToString();
