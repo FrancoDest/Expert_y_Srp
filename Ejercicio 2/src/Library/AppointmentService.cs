@@ -6,7 +6,7 @@ namespace Library
     public class AppointmentService
     {
         /// <summary>
-        /// Este método tiene varias responsabilidades, las cuales consisten en imprimir un mensaje en consola, y verificar que los datos ingresados no sean nulos. Para que la clase cumpla con SRP, la impresión del mensaje y cada verificación de los datos ingresados deeberían realizarse por separado.
+        /// Este método tiene varias responsabilidades, las cuales consisten en generar una string con un mensaje en consola, y verificar que los datos ingresados no sean nulos. Para que la clase cumpla con SRP, la creación del mensaje y cada verificación de los datos ingresados deeberían realizarse por separado.
         /// </summary>
         /// <param name="name"></param>
         /// <param name="id"></param>
