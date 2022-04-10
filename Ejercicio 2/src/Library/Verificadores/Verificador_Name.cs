@@ -3,6 +3,9 @@ using System.Text;
 
 namespace Library
 {
+    /// <summary>
+    /// verifica si el nombre es válido.
+    /// </summary>
     public static class Verificador_Name
     {
         public static bool ValidName(string client_name)

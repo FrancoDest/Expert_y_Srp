@@ -3,6 +3,9 @@ using System.Text;
 
 namespace Library
 {
+    /// <summary>
+    /// Esta clase se encarga de validar los datos, devuelve true si los datos son correctos y false en caso contrario.
+    /// </summary>
     public static class Validator
     {
         public static bool ValidStrings(string name, string id, string doctorName, string appointmentPlace, string phoneNumber)
@@ -14,7 +17,7 @@ namespace Library
             bool validPhoneNumber = Verificador_PhoneNumber.ValidPhoneNumber(phoneNumber);
             bool result = true;
 
-            if (!validName ^ !validId  ^ !validDoctorName ^ !validPlace ^ !validPhoneNumber)
+            if (!validName || !validId  || !validDoctorName || !validPlace || !validPhoneNumber)
             {
                 result = false;
             }

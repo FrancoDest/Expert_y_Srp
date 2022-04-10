@@ -3,6 +3,9 @@ using System.Text;
 
 namespace Library
 {
+    /// <summary>
+    /// verifica si el lugar de la consulta es válido.
+    /// </summary>
     public static class Verificador_AppointmentPlace
     {
         public static bool ValidAppointmentPlace(string place)

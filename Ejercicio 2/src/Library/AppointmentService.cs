@@ -3,6 +3,9 @@ using System.Text;
 
 namespace Library
 {
+    /// <summary>
+    /// Esta clase se encarga de generar un string con el mensaje final.
+    /// </summary>
     public class AppointmentService
     {
         public static string CreateAppointment(string name, string id, string phoneNumber, DateTime date, string appointmentPlace, string doctorName)

@@ -3,6 +3,9 @@ using System.Text;
 
 namespace Library
 {
+    /// <summary>
+    /// verifica si el id es válido.
+    /// </summary>
     public static class Verificador_Id
     {
         public static bool ValidId(string id)

@@ -22,6 +22,9 @@ namespace Program
             string appointmentResult5 = AppointmentService.CreateAppointment("Ralf Manson", "UWU", "5555-555-555", DateTime.Now, "Queen Street", "");
             Console.WriteLine(appointmentResult5);
 
+            string appointmentResult7 = AppointmentService.CreateAppointment("", "", "5555-555-555", DateTime.Now, "Queen Street", "");
+            Console.WriteLine(appointmentResult7);
+
             string appointmentResult6 = AppointmentService.CreateAppointment("Ralf Manson", "UWU", "5555-555-555", DateTime.Now, "Queen Street", "xd");
             Console.WriteLine(appointmentResult6);
         }

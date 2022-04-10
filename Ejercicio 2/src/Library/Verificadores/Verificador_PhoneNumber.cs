@@ -3,6 +3,9 @@ using System.Text;
 
 namespace Library
 {
+    /// <summary>
+    /// verifica si el numero de telefono es válido.
+    /// </summary>
     public static class Verificador_PhoneNumber
     {
         public static bool ValidPhoneNumber(string phone)
