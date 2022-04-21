@@ -5,11 +5,12 @@ namespace SRP
     public class Libro
     {
 
-        public string Titulo { get ; }
-        public string Autor { get ; }
-        public string Codigo { get ;  }
-        public string SectorBiblioteca { get ; set; }
-        public string EstanteBiblioteca { get ; set; }
+        public string Titulo { get; }
+        public string Autor { get; }
+        public string Codigo { get; }
+        private Almacenamiento Lugar { get; set; }
+        public string SectorBiblioteca { get { return Lugar.Sector; } }
+        public string EstanteBiblioteca { get { return Lugar.Estante; } }
 
         public Libro(String titulo, String autor, String codigo)
         {
@@ -20,8 +21,7 @@ namespace SRP
 
         public void AlmacenarLibro(String sector, String estante)
         {
-            this.SectorBiblioteca = sector;
-            this.EstanteBiblioteca = estante;
+            this.Lugar = new Almacenamiento(sector, estante);
         }
 
     }
